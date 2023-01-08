@@ -1,0 +1,51 @@
+// This code prints a triangle of asterisks to the console.
+#include <bits/stdc++.h>
+
+using namespace std;
+
+// This class contains the function to print the triangle.
+class Solution{
+public:
+	
+	// This function prints a triangle of asterisks with a base of length 2*n-1.
+	// Each row of the triangle has i spaces before and after the row of asterisks.
+	void printTriangle(int n) {
+	    // Iterate through each row of the triangle.
+	    for(int i=0; i<n; i++){
+	        // Print i spaces before the row of asterisks.
+	        for(int j=0; j<i; j++){
+	            cout<<" ";
+	        }
+	        // Print the row of asterisks.
+	        for(int j=0; j<2*n-(2*i+1); j++){
+	            cout<<"*";
+	        }
+	        // Print i spaces after the row of asterisks.
+	        for(int j=0; j<i; j++){
+	            cout<<" ";
+	        }
+	        // Move to the next line.
+	        cout<<endl;
+	    }
+	}
+};
+
+
+int main() {
+    // Read in the number of test cases.
+    int t;
+    cin >> t;
+    // Iterate through each test case.
+    while (t--) {
+        // Read in the base length of the triangle.
+        int n;
+        cin >> n;
+        
+        // Create an instance of the Solution class.
+        Solution ob;
+        // Call the function to print the triangle.
+        ob.printTriangle(n);
+    }
+   
+    return 0;
+}
